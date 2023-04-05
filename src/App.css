@@ -1,0 +1,36 @@
+/* DateSelect.js */
+.input-width {
+  width: 110px;
+}
+
+/* DropdownMenu.js */
+.dropdown-width {
+  width: 100%;
+}
+.responsive-dropdownarea {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+/* Maps.js */
+.leaflet-container {
+  height: 600px;
+  width: 600px;
+}
+
+@media screen and (max-width: 992px) {
+  .respon-droparea {
+    padding: 1rem;
+  }
+  .responsive-dropdownarea {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown-width {
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+  .leaflet-container {
+    height: 400px;
+    width: 300px;
+  }
+}
