@@ -1,11 +1,12 @@
 import { useRef, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import mapDetail from './mapDetail'
+import BarChart from './BarChart'
 import '../App.css'
 import '../style/map.css'
 import '../../node_modules/leaflet/dist/leaflet.css'
 
-const Maps = () => {
+const MapBarsArea = ({ date }) => {
   const [center, setCenter] = useState({ lat: 19.07715, lng: 72.866408 })
   const zoomLevel = 13
   const mapRef = useRef()
@@ -15,7 +16,7 @@ const Maps = () => {
 
   return (
     <div className="row p-5">
-      <div className="col text-center">
+      <div className="col text-center" style={{ zIndex: 0 }}>
         <MapContainer
           center={center}
           zoom={zoomLevel}
@@ -34,8 +35,31 @@ const Maps = () => {
           </Marker>
         </MapContainer>
       </div>
+      <div className="col bar-height">
+        <div className="row">
+          <BarChart date={date} attr={'PM2_5'} />
+        </div>
+        <div className="row">
+          <BarChart date={date} attr={'PM10'} />
+        </div>
+        <div className="row">
+          <BarChart date={date} attr={'NO'} />
+        </div>
+        <div className="row">
+          <BarChart date={date} attr={'NO2'} />
+        </div>
+        <div className="row">
+          <BarChart date={date} attr={'SO2'} />
+        </div>
+        <div className="row">
+          <BarChart date={date} attr={'CO'} />
+        </div>
+        <div className="row">
+          <BarChart date={date} attr={'Ozone'} />
+        </div>
+      </div>
     </div>
   )
 }
 
-export default Maps
+export default MapBarsArea

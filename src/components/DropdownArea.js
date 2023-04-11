@@ -1,9 +1,8 @@
 import Dropdownmenu from './DropdownMenu'
 import DateSelect from './DateSelect'
-import TimeSelect from './TimeSelect'
 import '../App.css'
 
-const DropdownArea = () => {
+const DropdownArea = ({ handleDate, selectedDate }) => {
   return (
     <div className="respon-droparea">
       <div className="d-flex justify-content-around responsive-dropdownarea">
@@ -26,10 +25,11 @@ const DropdownArea = () => {
           ]}
           placeholder={'Select Station'}
         />
-      </div>
-      <div className="d-flex justify-content-around date-time-padding">
-        <DateSelect nameholder={'Date'} />
-        <TimeSelect nameholder={'Time'} />
+        <DateSelect
+          nameholder={'Date'}
+          handleDate={handleDate}
+          selectedDate={selectedDate}
+        />
       </div>
     </div>
   )

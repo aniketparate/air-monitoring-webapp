@@ -9,12 +9,16 @@
 }
 .responsive-dropdownarea {
   padding: 0.5rem 0 0.5rem 0;
+  align-content: center;
 }
 
-/* Maps.js */
+/* MapBarsArea.js */
 .leaflet-container {
   height: 600px;
   width: 600px;
+}
+.bar-height > .row {
+  height: 80px;
 }
 
 @media screen and (max-width: 992px) {
@@ -32,5 +36,9 @@
   .leaflet-container {
     height: 400px;
     width: 300px;
+  }
+  .date-cont-center {
+    padding: 0.5rem 0 0.5rem 0;
+    justify-content: center;
   }
 }

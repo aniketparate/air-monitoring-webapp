@@ -3,9 +3,8 @@ import TimePicker from 'react-time-picker'
 import '../App.css'
 
 const TimeSelect = ({ nameholder }) => {
-  var d = new Date()
-  const [date, newDate] = useState(d)
-  console.log(date.toLocaleString)
+  const [date, newDate] = useState(new Date())
+  console.log(date)
   return (
     <div className="d-flex">
       <p className="align-self-center m-0 px-1 py-2 border bg-light">
